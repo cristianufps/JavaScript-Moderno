@@ -19,7 +19,7 @@ const getHeroeByIdAsync = (id) => {
         setTimeout( () => {
             const h = getHeroeById(id);
             if(p1) {
-                resolved(p1);
+                resolved("El heroe es "+ p1);
             }
             else {
                 reject("El heroe no existe");
