@@ -4,7 +4,6 @@ const apiKey = 'SHWMz4AMy0F1RbaNX3SZozX64YrfSNcq';
 
 const peticion = fetch(`http://api.giphy.com/v1/gifs/random?api_key=${apiKey}`);
 
-
 peticion
     .then(resp => resp.json())
     .then(({ data }) => {
@@ -13,5 +12,6 @@ peticion
         img.src = url;
 
         document.body.append(img);
+        console.log('document: ', document);
     })
     .catch(console.warn);
